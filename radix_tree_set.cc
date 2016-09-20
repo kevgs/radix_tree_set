@@ -60,7 +60,6 @@ class RadixTreeSet {
 
   bool Find(const string &key) const { return Find(begin(key), end(key)); }
 
-  // Empty string is always inside.
   bool Find(string::const_iterator b, string::const_iterator e) const {
     auto *node = &root_;
     while (node != nullptr) {
